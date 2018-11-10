@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>使用css伪类别来设置超链接样式</title>
+<style type="text/css">
+	a:LINK {/*普通的未被访问的连接*/
+	color: aqua;
+	text-decoration:none;
+	} 
+	a:VISITED {/*用户已访问的连接*/
+	color: aqua;
+	text-decoration: none;
+}
+	a:hover{/*鼠标指针位于链接的上方*/
+	color: yellow;
+	text-decoration: none;
+	}
+	a:ACTIVE {
+	color: lime;
+}
+</style>
+</head>
+<body>
+<a href="http://www.baidu.com">超链接</a>
+</body>
+</html>
