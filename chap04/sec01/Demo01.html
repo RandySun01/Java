@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript对象</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*function speak(something){
+		alert(something);
+	}
+	var p = new Object();//创建对象
+	p.name = "Sunrongzhi";//动态添加属性
+	p.func = speak;	//动态添加方法
+	alert(p.name);
+	p.func("Hello,大家好！");*/
+	//1.删除
+	/*delete p.name;
+	alert(p.name);
+	delete.func;
+	p.func("Hell 大家好");*/
+	/*
+	p.name = undefined;//2.删除
+	p.func = undefined;//删除
+	p.func("hell,大家好");
+	*/
+	//构造方法 可以构造属性和方法
+	function person(name, age){
+		this.name2 = name;
+		this.age2 = age;
+		//
+		function speak(something){
+			alert(something);
+		}
+		this.func=speak;
+	}
+	var p1 = new person("jack", 12);
+	alert(p1.name2);
+	alert(p1.age2);
+	p1.func("hello eberyOne");
+</script>
+</body>
+</html>

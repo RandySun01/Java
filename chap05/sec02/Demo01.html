@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>c</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function disp_confirm()
+{
+var r=confirm("Press a button")
+if (r==true)
+  {
+  document.write("You pressed OK!")
+  }
+else
+  {
+  document.write("You pressed Cancel!")
+  }
+}
+	window.alert("window对象的方法");
+
+function disp_prompt()
+{
+	var name=prompt("Please enter your name","")
+	 if (name!=null && name!="")
+	 {
+	   document.write("Hello " + name + "!")
+	  }
+	 }
+</script>
+</head>
+<body>
+
+	<input type="button" onclick="disp_prompt()"
+	value="Display a prompt box" />
+	<input type="button" onclick="disp_confirm()"
+value="Display a confirm box" />
+</script>
+</body>
+</html>

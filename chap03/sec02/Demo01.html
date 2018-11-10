@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript操作Dom节点 </title>
+<script type="text/javascript">
+	function modfyDom(){
+		document.getElementById("txt").innerHTML="用户名：";//innerHTML容器
+		document.getElementById("userName").value="SunRongzhi"//no容器
+	}
+	function addDom(){
+		var para = document.createElement("p");
+		var node = document.createTextNode(" ...前 ...");
+		var para2 = document.createElement("p");
+		var node2 = document.createTextNode(" ...后 ...");
+		para.appendChild(node);
+		para2.appendChild(node2);
+		var parent = document.getElementById("parent");
+		var son1 = document.getElementById("son1");
+		parent.insertBefore(para, son1);
+		parent.appendChild(para2);
+		
+	} 
+	function removeDom(){
+		var parent = document.getElementById("parent");
+		var son1 = document.getElementById("son1");
+		parent.removeChild(son1);
+	}
+	
+</script>
+</head>
+<body>
+<div id="parent">
+	<div id="son1"> 
+		<font id="txt">:</font><input type="text" id="userName" name="useName"/>
+	</div>
+</div>
+<input type="button" value="修改DOM节点 " onclick="modfyDom()"/>
+<input type="button" value="添加DOM节点 " onclick="addDom()"/>
+<input type="button" value="删除DOM节点 " onclick="removeDom()"/>
+</body>
+</html>

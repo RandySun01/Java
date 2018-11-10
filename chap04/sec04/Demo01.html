@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript数组</title>
+</head>
+<body>
+<script type="text/javascript">
+	var arr = new Array();
+	var arr2 = new Array(4);
+	arr[0]="jack";
+	arr[1]="i";
+	arr[2]="louve";
+	arr[3]="you";
+	arr[4]="june";
+	
+	arr2[0]=5;
+	arr2["a"]=2;
+	arr2[2]=0;
+	arr2[3]=5;
+	//遍历
+	for(var i = 0; i < arr.length; i++){
+		document.write(arr[i]+"<br/>");
+	}
+	document.write("<hr/>");
+	var o;
+	for(o in arr2){
+		document.write("下标：  "+o+" 值： "+arr2[o]+"<br/>");
+		
+	}
+	//排序
+	document.write("<hr/>");
+	document.write("sort() "+arr.sort()+"<br/>");
+	document.write("sort() "+arr2.sort()+"<br/>");
+	document.write("<hr/>");
+	//数组元素组合成字符串join方法
+	document.write("join()"+arr.join()+"<br/>");
+	document.write("join()"+arr2.join(".")+"<br/>");
+	document.write("<hr/>");
+	//合并数组元素concat()方法
+	document.write("<hr/>");
+	document.write("concat()"+arr.concat(arr2)+"<br/>");
+	document.write("<hr/>");
+	//颠倒数组元素
+	document.write("reverse()"+arr.reverse()+"<br/>");
+</script>
+</body>
+</html>
