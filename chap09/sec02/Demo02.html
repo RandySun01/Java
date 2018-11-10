@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>使用clear清除浮动的影响   left</title>
+<style type="text/css">
+	.parent{
+		background-color: yellow;
+		border:1px solid red;
+	}
+	.d1{
+		float: left;
+		background-color: gray;
+		border: 2px solid gray;
+	}
+	.d2{
+		float: right;
+		margin: 5px;
+		height: 100px;
+		background-color: blue;
+		border: 1px solid blue;
+	}
+	p{
+		clear: left;
+		margin: 5px;
+		background-color:green;
+		border: 2px solid green;
+	}
+</style>
+</head>
+<body>
+	<div class= "parent">
+		<div class="d1">盒子A</div>
+		<div class="d2">盒子B</div>
+		<p> Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，因此Java语言具有功能强大和简单易用两个特征。</p>
+	</div>
+
+
+</body>
+</html>
