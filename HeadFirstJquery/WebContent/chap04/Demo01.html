@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jquery 事件操作</title>
+
+<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+<script type="text/javascript"  >
+
+$(document).ready(function(){	 
+		 alert("文档加载完毕");	
+		 
+		 // 1单击事件
+		 $("#zs").click(function(){
+			 $("p").html("<font color=red>张三单击了</font>");
+			 
+		 });
+		 // 2双击事件
+		 $("#zs").dblclick(function(){
+			 $("p").html("<font color=red> 张三被双击了</font>");
+		 });
+		 
+		 // 3获得焦点		 
+		 $("#t1").focus(function(){
+			 $("#t1").val("获得焦点");
+			 
+		 });
+		 // 4失去焦点
+		 $("#t1").blur(function(){
+			 
+			 $("#t1").val("失去焦点");
+		 });
+		 
+		 
+		 // 5鼠标移入
+		 $("#d1").mouseover(function(){
+			 $("#d1").html("鼠标移入");
+		 });
+		 
+		 // 6鼠标移出
+		 $("#d1").mouseout(function(){
+			 $("#d1").html("鼠标移出");
+		 })
+		 
+});
+
+</script>
+</head>
+<body>
+<input type="button" id="zs", value="张三">
+<p > </p>
+<input type="text" id="t1">
+<hr/>
+<div id="d1" style="border: 1px solid red; width:100px;height:100px">
+
+
+</div>
+</body>
+</html>

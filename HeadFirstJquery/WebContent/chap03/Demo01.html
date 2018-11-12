@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>操作DOM节点</title>
+<style type="text/css">
+	.lc{
+		background-color: red;
+	}
+	
+	.lc2{
+		background-color: blue;
+	}
+	
+	.lc3{
+		font-weight: bold;
+	}
+</style>
+<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+<script type="text/javascript"  >
+
+$(document).ready(function(){	 
+	//  操作DOM节点
+	// 1 查找节点
+	/* var li2 = $("ul li:eq(1)");
+	var li2_txt = li2.text();
+	alert(li2_txt);  */ 
+	
+	// 2，创建节点
+	/* var li1=$("<li title='这是马化腾'>马化腾</li>");
+	var li2=$("<li title='这是李彦宏'>李彦宏</li>");
+	var li22=$("ul li:eq(1)");
+	$("ul").append(li1);
+	li2.insertAfter(li22);  */
+	// 3. 删除节点
+	/* $("ul li:eq(1)").remove(); */
+	
+	// 4 操作DOM属性
+	// 4.1 获取属性
+	/* var li2 = $("ul li:eq(1)");
+	var li2_attr = li2.attr("title");
+	alert(li2_attr); */
+	
+	// 4.2 设置属性
+	// $("ul li:eq(1)").attr("title","RandySun");
+	
+	// 4.3 删除属性
+	// $("ul li:eq(1)").removeAttr("title");
+	
+	// 5 操作DOM节点样式
+	// 5.1 获取样式
+	/* var li2 = $("ul li:eq(1)");
+	var li2_class = li2.attr("class");
+	alert(li2_class); */
+	
+	// 5.2 设置样式
+	
+	// $("ul li:eq(1)").attr("class", "lc2");
+	
+	// 5.3 追加样式
+	// $("ul li:eq(1)").addClass("lc3");
+	// 5.4 移除样式
+	// $("ul li:eq(1)").removeClass("lc");
+	// 6  设置和获取HTML， 文本和值
+	// 6.1 获取html
+	/* var l1_html = $("ul li:eq(0)").html();
+	alert(l1_html); */
+	// 6.2 设置html
+	// $("ul li:eq(0)").html("<font color=red> RandySun</font>");
+	// 6.3 获取文本
+	/* var l1_text = $("ul li:eq(0)").text();
+	alert(l1_text); */
+	// 6.3 设置文本
+	// $("ul li:eq(0)").text("RandySun");
+	
+	// 7 遍历节点
+	// 7.1 children()方法
+	/* var b = $("body").children();
+	alert(b.length);
+	var u = $("ul").children();
+	alert(u.length);
+	for(var i=0; i < u.length; i++){
+		//alert(b[i].innerHTML);
+		alert($(u[i]).html());
+	} */
+	
+	// 7.2 next()方法
+	
+	/* var l1 = $("ul li:eq(1)").next();
+	alert(l1.html()); */
+	// 7.3 prev()上一个
+	/* var l = $("ul li:eq(1)").prev();
+	alert(l.html()); */
+	
+	// 8 CSS-DOM操作
+	// 8.1 获取CSS样式
+	/* var c = $("#jq").css("color");
+	alert(c); */
+	
+	// 8.2 设置CSS样式
+	var c = $("#jq").css("color", "blue");
+	 
+	
+	
+});
+
+// 设置，获取值
+function getUserName(){
+	var username = $("#userName").val();
+	alert(username);
+	
+}
+function setUerName(){
+	$("#userName").val("RandySun");
+	
+}
+</script>
+</head>
+<body>
+<p>你最喜欢的名人是</p>
+<ul>
+	<li title="这是乔布斯"><font color="green">乔布斯</font></li>
+	<li title="这是比尔盖茨" class="lc">比尔盖茨</li>
+	<li title="这是詹姆斯高斯林">詹姆斯高斯林</li>
+		
+	
+</ul>
+
+<input type="text" id="userName">
+<input type="button" value="获取值" onclick="getUserName()">
+<input type="button" value = "设置值" onclick="setUerName()">
+
+<p id="jq" style="color: red">Jquery吊炸天</p>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jquery</title>
+<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+<script type="text/javascript"  >
+	function getContent(){
+		// var content=document.getElementById("content").value;
+		var content = $("#content").val();
+		alert(content);
+	}
+	
+</script>
+</head>
+<body>
+
+<input type="text" id="content"/>&nbsp;&nbsp;<input type="button" value="button" id ="button" onClick="getContent()"/>
+</body>
+</html>

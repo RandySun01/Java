@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>选择器介绍</title>
+<style type="text/css">
+	.c1{
+		font-size: 40px;
+	}
+	
+</style>
+<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+<script type="text/javascript"  >
+
+$(document).ready(function(){
+	// 基本选择器
+	// $("#a1").css("background-color","red"); // 根据id
+	// $(".c1").css("background-color","red"); // 根据class类别
+	// $("a").css("background-color","red");   // 根据标签元素
+	
+	// 属性选择器
+	// $("[href]").css("background-color","red"); // 根据属性
+	// $("[href='http://www.iteye.com']").css("background-color","red"); // 根据属性值
+	// $("[href$='com']").css("background-color","red")// 根据属性结尾
+	// 其他选择器
+	// $("p.c1").css("background-color", "red"); // 子层关系选择器
+	$("ul li:first").css("background-color", "red");
+});
+	
+</script>
+</head>
+<body>
+
+<p class="c1">Jquery选择器</p>
+<ul>
+	<li id="i1"><a id="a1" class="c1" href="http://www.java1234.com" >Java知识分享网</a></li>
+	<li><a id="a2" class="c1" href="http://www.csdn.net">CSDN</a></li>
+	<li><a href="http://www.iteye.com">iteye</a></li>
+	<li><a href="http://www.cnblogs.com">博客园</a></li>
+	<li><a class="c1" href="#">百度</a></li>
+	<li><a href="http://www.google.com">谷歌</a></li>
+</ul>
+</body>
+</html>

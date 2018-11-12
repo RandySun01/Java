@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Jquery 动画效果</title>
+
+<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+<script type="text/javascript"  >
+
+$(document).ready(function(){
+	
+	// 1显示
+	$("#b1").click(function(){
+		$("#p1").show();
+		
+	});
+	// 2隐藏
+	$("#b2").click(function(){
+		$("#p1").hide();
+	});
+	
+	// 3淡出
+	$("#b3").click(function(){
+		$("#d1").fadeOut();
+	});
+	// 4淡入
+	$("#b4").click(function(){
+		$("#d1").fadeIn();
+	});
+	
+	// 5淡入淡出开关
+	$("#b5").click(function(){
+		// $("#d1").fadeToggle();
+		// $("#d1").fadeToggle("slow");
+		// $("#d1").fadeToggle("fast");
+		$("#d1").fadeToggle(10000);
+	});
+	// 6透明度
+	$("#b6").click(function(){
+		$("#d1").fadeTo("slow", 0.1);
+		$("#d2").fadeTo("slow", 0.5);
+		$("#d3").fadeTo("slow", 0.7);
+	});
+	
+	// 上滑，下滑
+	$("#b7").click(function(){
+		$("#d4").slideDown("slow");
+	});
+	
+	$("#b8").click(function(){
+		$("#d4").slideUp("slow");
+	});
+	
+	// 向左移动
+	$("#b9").click(function(){
+		$("#d5").animate({left:'500px'},'slow');
+	});
+	// 动画效果
+	$("#b10").click(function(){
+		$("#d5").animate({
+			left:'500px',
+			opacity:0.5,
+			height:'150px',
+			width:'150px'
+			},'slow');
+	});
+	$("#b11").click(function(){
+		$("#d5").animate({
+			left:'500px',
+			opacity:0.5,
+			height:'+=150px',
+			width:'+=150px'
+			},'slow');
+	});
+	// 回调事件
+	$("#b12").click(function(){
+		$("#p2").show(function(){
+			alert("小日本出来了") ;
+		});
+	});
+	
+	// 停止动画
+	$("#b13").click(function(){
+		$("#d6").animate({left:'500px'},'slow');
+	});
+	$("#b14").click(function(){
+		$("#d6").stop();
+	});
+});
+
+</script>
+</head>
+<body>
+<input type="button" value="显示" id="b1">
+<input type="button" value="隐藏" id="b2">
+<p id="p1">小日本</p>
+<hr/>
+
+<input type="button" value="淡出" id="b3">
+<input type="button" value="淡入" id="b4">
+<input type="button" value="淡入淡出开关" id="b5">
+<input type="button" value="透明度" id="b6">
+<div id="d1" style="width:100px; height:100px; background-color:red; margin:10px">
+
+</div>
+<div id="d2" style="width:100px; height:100px; background-color:green; margin:10px">
+
+</div>
+<div id="d3" style="width:100px; height:100px; background-color:blue; margin:10px">
+
+</div>
+<hr/>
+<input type="button" value="向下滑动" id="b7">
+<input type="button" value="向上滑动" id="b8">
+<div id="d4" style="background-color: gray;display: none;height: 100px;width: 500px;">
+	<p>RandySun</p>
+	<p>Jquery掉渣天！</p>
+</div>
+
+<hr/>
+<input type="button" value="向左移动" id="b9"/>
+<input type="button" value="动画效果2" id="b10"/>
+<input type="button" value="动画效果3" id="b11"/>
+<div id="d5" style="background-color: gray;height: 100px;width: 500px; position: absolute;">
+	<p>RandySun</p>
+	<p>Jquery掉渣天！</p>
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<hr/>
+<input type="button" value="回调事件" id="b12"/>
+<p id="p2" style="display:none">小日本</p>
+<hr/>
+<input type="button" value="向左移动" id="b13">
+<input type="button" value="停止" id="b14">
+<div id="d6" style="background-color: gray;height: 100px;width: 100px; position: absolute;">
+	<p>RandySun</p>
+	<p>Jquery掉渣天！</p>
+</div>
+
+
+</body>
+</html>

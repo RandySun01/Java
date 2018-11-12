@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jquery</title>
+<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+<script type="text/javascript"  >
+	/* function getContent(){
+		// var content=document.getElementById("content").value;
+		var content = $("#content").val();
+		alert(content);
+	} */
+	/* function init(){
+		document.getElementById("button").onclick = function(){
+		    var content=document.getElementById("content").value;
+			alert(content)
+		}
+	} */
+	$(document).ready(function(){
+		 $("#button").click(function(){
+			 alert($("#content").val());
+		 });
+	});
+</script>
+</head>
+<body >
+
+<input type="text" id="content"/>&nbsp;&nbsp;<input type="button" value="button" id ="button"  />
+</body>
+</html>
