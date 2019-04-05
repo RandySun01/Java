@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>HeadFirstEasyUi</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+   
+  
+  <servlet>
+  	<servlet-name>formServlet</servlet-name>
+  	<servlet-class>cn.edu.hnnu.ajax.FromServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>formServlet</servlet-name>
+  	<url-pattern>/form</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>userList</servlet-name>
+ 	<servlet-class>cn.edu.hnnu.web.UserListServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>userList</servlet-name>
+  	<url-pattern>/userList</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>userDelete</servlet-name>
+ 	<servlet-class>cn.edu.hnnu.web.UserDeleteServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>userDelete</servlet-name>
+  	<url-pattern>/userDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>userSave</servlet-name>
+ 	<servlet-class>cn.edu.hnnu.web.UserSaveServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>userSave</servlet-name>
+  	<url-pattern>/userSave</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
