@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Droppable - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/demo/demo.css">
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>基本可拽入容器</h2>
+	<div class="demo-info">
+		<div class="demo-tip icon-tip"></div>
+		<div>把左边项拖拽到右边目标区域.</div>
+	</div>
+	<div style="margin:10px 0;"></div>
+	<div style="float:left;width:200px;margin-right:20px;">
+		<div class="title">源</div>
+		<div>
+			<div class="dragitem">苹果</div>
+			<div class="dragitem">桃子</div>
+			<div class="dragitem">桔子</div>
+		</div>
+	</div>
+	<div style="float:left;width:200px;">
+		<div class="title">目标</div>
+		<div class="easyui-droppable targetarea"
+				data-options="
+					accept: '.dragitem',
+					onDragEnter:function(e,source){
+						$(this).html('进入');
+					},
+					onDragLeave: function(e,source){
+						$(this).html('离开');
+					},
+					onDrop: function(e,source){
+						$(this).html($(source).html() + ' 拽入');
+					}
+				">
+		</div>
+	</div>
+	<div style="clear:both"></div>
+	<style type="text/css">
+		.title{
+			margin-bottom:10px;
+		}
+		.dragitem{
+			border:1px solid #ccc;
+			width:50px;
+			height:50px;
+			margin-bottom:10px;
+		}
+		.targetarea{
+			border:1px solid red;
+			height:150px;
+		}
+		.proxy{
+			border:1px solid #ccc;
+			width:80px;
+			background:#fafafa;
+		}
+	</style>
+	<script>
+		$(function(){
+			$('.dragitem').draggable({
+				revert:true,
+				deltaX:10,
+				deltaY:10,
+				proxy:function(source){
+					var n = $('<div class="proxy"></div>');
+					n.html($(source).html()).appendTo('body');
+					return n;
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>

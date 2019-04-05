@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Custom Format in ComboBox - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/demo/demo.css">
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
+	 <script type="text/javascript" src="../jquery-easyui-1.3.3/locale/easyui-lang-zh_CN.js"></script>
+	
+</head>
+<body>
+	<h2>下拉框自定义格式</h2>
+	<div class="demo-info" style="margin-bottom:10px">
+		<div class="demo-tip icon-tip"></div>
+		<div>如何在下拉框中自定义格式.</div>
+	</div>
+	<input class="easyui-combobox" name="language" data-options="
+				url: '../chap12/combobox_data.json',
+				valueField: 'id',
+				textField: 'text',
+				panelWidth: 350,
+				panelHeight: 'auto',
+				formatter: formatItem
+			">
+	<script type="text/javascript">
+		function formatItem(row){
+			var s = '<span style="font-weight:bold">' + row.text + '</span><br/>' +
+					'<span style="color:#888">' + row.desc + '</span>';
+			return s;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic NumberSpinner - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/demo/demo.css">
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body>
+	<h2>基本数字微调器组件</h2>
+	<div class="demo-info">
+		<div class="demo-tip icon-tip"></div>
+		<div>点击微调按钮来调整时间.</div>
+	</div>
+	<div style="margin:10px 0;"></div>
+	<input class="easyui-numberspinner" style="width:80px;" data-options="
+				onChange: function(value){
+					$('#vv').text(value);
+				}
+			"></input>
+	<div style="margin:10px 0;">
+		值: <span id="vv"></span>
+	</div>
+</body>
+</html>

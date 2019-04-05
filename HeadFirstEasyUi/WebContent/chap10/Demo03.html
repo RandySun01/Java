@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Format Tip Information - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/demo/demo.css">
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
+	 <script type="text/javascript" src="../jquery-easyui-1.3.3/locale/easyui-lang-zh_CN.js"></script>
+	
+</head>
+<body>
+	<h2>格式化提示信息</h2>
+	<div class="demo-info">
+		<div class="demo-tip icon-tip"></div>
+		<div>如何格式化提示信息.</div>
+	</div>
+	<div style="margin:10px 0;"></div>
+	<div style="margin-top:20px;">
+		<input class="easyui-slider" value="12" style="width:300px" data-options="
+				showTip: true,
+				rule: [0,'|',25,'|',50,'|',75,'|',100],
+				tipFormatter: function(value){
+					return value+'px';
+				},
+				onChange: function(value){
+					$('#ff').css('font-size', value);
+				}">
+	</div>
+	<div id="ff" style="margin-top:50px;font-size:12px">https://github.com/wnqfmqlq/Java</div>
+</body>
+</html>
