@@ -19,3 +19,5 @@
   Jquery语法及Jquery Ajax；熟悉Jquery选择器，Jquery操作DOM，Jquery事件操作；了解Jquery动画；  
 10、XML  
   使用DOM4J及JDOM操作XML；熟悉DOM及SAX方式解析XML原理  
+11、EasyUI基本控件
+  EasyUI基本控件，以及与Java后台交互；
