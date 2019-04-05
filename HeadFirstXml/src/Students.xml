@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+	<student id = "001">
+		<name id="001" >张三</name>
+		<sex>男</sex>
+		<age>19</age>
+	</student>
+	<student id="002">
+		<name >李四</name>
+		<sex>女</sex>
+		<age>25</age>
+	</student>
+
+</students>
