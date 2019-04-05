@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>TreeGrid with Footer - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/demo/demo.css">
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>树形表格底部行</h2>
+	<div class="demo-info">
+		<div class="demo-tip icon-tip"></div>
+		<div>在树形表格底部显示总结信息.</div>
+	</div>
+	<div style="margin:10px 0;"></div>
+	<table id="tg"></table>
+	<script type="text/javascript">
+		$(function(){
+			$('#tg').treegrid({
+				title:'树形表格底部行',
+				iconCls:'icon-ok',
+				width:700,
+				height:250,
+				rownumbers: true,
+				animate:true,
+				collapsible:true,
+				fitColumns:true,
+				url:'../chap36/treegrid_data2.json',
+				idField:'id',
+				treeField:'name',
+				showFooter:true,
+				columns:[[
+	                {title:'任务名称',field:'name',width:180},
+					{title:'人员',field:'persons',width:60,align:'right'},
+					{title:'开始日期',field:'begin',width:80},
+					{title:'结束日期',field:'end',width:80},
+					{title:'进度',field:'progress',width:120,
+					    formatter:function(value){
+					    	if (value){
+						    	var s = '<div style="width:100%;border:1px solid #ccc">' +
+						    			'<div style="width:' + value + '%;background:#cc0000;color:#fff">' + value + '%' + '</div>'
+						    			'</div>';
+						    	return s;
+					    	} else {
+						    	return '';
+					    	}
+				    	}
+					}
+				]]
+			});
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CheckBox Tree - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/demo/demo.css">
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
+	 <script type="text/javascript" src="../jquery-easyui-1.3.3/locale/easyui-lang-zh_CN.js"></script>
+	
+</head>
+<body>
+	<h2>复选框树</h2>
+	<div class="demo-info">
+		<div class="demo-tip icon-tip"></div>
+		<div>带复选框的树节点.</div>
+	</div>
+	<div style="margin:10px 0;">
+		<a href="#" class="easyui-linkbutton" onclick="getChecked()">获取选中值</a> 
+		<br/>
+		<input type="checkbox" checked onchange="$('#tt').tree({cascadeCheck:$(this).is(':checked')})">级联选中
+		<input type="checkbox" onchange="$('#tt').tree({onlyLeafCheck:$(this).is(':checked')})">只有叶子节点有复选框
+	</div>
+	<ul id="tt" class="easyui-tree" data-options="url:'../chap35/tree_data1.json',animate:true,checkbox:true"></ul>
+	<script type="text/javascript">
+		function getChecked(){
+			var nodes = $('#tt').tree('getChecked');
+			var s = '';
+			for(var i=0; i<nodes.length; i++){
+				if (s != '') s += ',';
+				s += nodes[i].text;
+			}
+			alert(s);
+		}
+	</script>
+</body>
+</html>

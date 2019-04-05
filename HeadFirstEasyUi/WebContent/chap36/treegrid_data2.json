@@ -1,0 +1,11 @@
+{"total":7,"rows":[
+	{"id":1,"name":"All Tasks","begin":"2010-03-04","end":"2010-03-20","progress":60,"iconCls":"icon-ok"},
+	{"id":2,"name":"Designing","begin":"2010-03-04","end":"2010-03-10","progress":100,"_parentId":1,"state":"closed"},
+	{"id":21,"name":"Database","persons":2,"begin":"2010-03-04","end":"2010-03-06","progress":100,"_parentId":2},
+	{"id":22,"name":"UML","persons":1,"begin":"2010-03-07","end":"2010-03-08","progress":100,"_parentId":2},
+	{"id":23,"name":"Export Document","persons":1,"begin":"2010-03-09","end":"2010-03-10","progress":100,"_parentId":2},
+	{"id":3,"name":"Coding","persons":2,"begin":"2010-03-11","end":"2010-03-18","progress":80},
+	{"id":4,"name":"Testing","persons":1,"begin":"2010-03-19","end":"2010-03-20","progress":20}
+],"footer":[
+	{"name":"Total Persons:","persons":7,"iconCls":"icon-sum"}
+]}

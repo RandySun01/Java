@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tree Context Menu - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.3.3/demo/demo.css">
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>树右键菜单</h2>
+	<div class="demo-info">
+		<div class="demo-tip icon-tip"></div>
+		<div>右击树节点显示菜单.</div>
+	</div>
+	<div style="margin:10px 0;">
+	</div>
+	<ul id="tt" class="easyui-tree" data-options="
+			url: '../chap35/tree_data1.json',
+			animate: true,
+			onContextMenu: function(e,node){
+				e.preventDefault();
+				$(this).tree('select',node.target);
+				$('#mm').menu('show',{
+					left: e.pageX,
+					top: e.pageY
+				});
+			}
+		"></ul>
+	<div id="mm" class="easyui-menu" style="width:120px;">
+		<div onclick="append()" data-options="iconCls:'icon-add'">添加</div>
+		<div onclick="remove()" data-options="iconCls:'icon-remove'">删除</div>
+		<div class="menu-sep"></div>
+		<div onclick="expand()">展开</div>
+		<div onclick="collapse()">收缩</div>
+	</div>
+	<script type="text/javascript">
+		function append(){
+			var t = $('#tt');
+			var node = t.tree('getSelected');
+			t.tree('append', {
+				parent: (node?node.target:null),
+				data: [{
+					text: 'new item1'
+				},{
+					text: 'new item2'
+				}]
+			});
+		}
+		function remove(){
+			var node = $('#tt').tree('getSelected');
+			$('#tt').tree('remove', node.target);
+		}
+		function collapse(){
+			var node = $('#tt').tree('getSelected');
+			$('#tt').tree('collapse',node.target);
+		}
+		function expand(){
+			var node = $('#tt').tree('getSelected');
+			$('#tt').tree('expand',node.target);
+		}
+	</script>
+</body>
+</html>
